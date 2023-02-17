@@ -40,7 +40,7 @@ public class Printer {
     private static String compose(TextAttribute... attributes) {
         return PREFIX + Arrays.stream(attributes)
                 .map(TextAttribute::getCode)
-                .collect(Collectors.joining(";"));
+                .collect(Collectors.joining(";")) + "m";
     }
 
 
